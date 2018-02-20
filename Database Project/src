@@ -1,0 +1,3 @@
+#!/bin/sh
+
+source ~db2leduc/cshrc.runtime

@@ -1,0 +1,23 @@
+/*Joshua Phillip, 207961907, EECS 3221, Assignment 2*/
+
+1. The naming convention for pthread function calls is to start them with pthread_ 
+http://www.manpagez.com/man/3/pthread/
+
+2. mutexes, condition variables, read-write locks, and barriers
+http://man7.org/linux/man-pages/man2/futex.2.html
+
+3. It is a good idea to call pthread_cond_wait from a loop to ensure that it has woken under the 
+correct conditions, ie not a spurious wake up, if not, it can return to a waiting state.
+https://linux.die.net/man/3/pthread_cond_wait
+
+4. After a thread is woken, the thread that is able to obtain the mutex first is the one that is executed.
+https://linux.die.net/man/3/pthread_cond_signal
+
+5. Holding multiple mutex when blocking on a conditional variable would result in one of the mutex
+being held until the wait is complete. This could lead to undesired results such as deadlocks if all
+other threads are waiting on that mutex. 
+https://linux.die.net/man/3/pthread_cond_wait
+
+6. A detached thread is one that does not join back to the parent thread. It's resources are released 
+automatically upon exit.
+https://linux.die.net/man/3/pthread_create
