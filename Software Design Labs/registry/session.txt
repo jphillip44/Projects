@@ -1,4 +1,0 @@
-put_alien(1, "Joe", [10, 10, 2000], "Canada")
-put(2, "Sally", [10, 10, 2000])
-marry(1,2, [10, 10, 2020])
-divorce(1,2)
